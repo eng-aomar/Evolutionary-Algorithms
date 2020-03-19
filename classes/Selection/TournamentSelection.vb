@@ -1,6 +1,6 @@
 ﻿'Impementation of Algorithm Number 32
 'Oridinal Method
-Public Class TournamentSelection : Implements ISelection
+Public Class TournamentSelection : Implements ISelection(Of BitArray)
     Dim BestIndividual, NextIndivual As BitArray
     Private TournamentSize_local As Integer = 2
     Dim Problem As IProblem
@@ -27,7 +27,7 @@ Public Class TournamentSelection : Implements ISelection
         Return population.GetIndevidualByIndex(selectedIndex)
     End Function
 
-    Public Function DoSelection(population As Population) As BitArray Implements ISelection.DoSelection
+    Public Function DoSelection(population As Population) As BitArray Implements ISelection(Of BitArray).DoSelection
         BestIndividual = Pick(population)
         NextIndivual = Pick(population)
         Problem = New OneMax
@@ -41,6 +41,8 @@ Public Class TournamentSelection : Implements ISelection
         Next
         Return BestIndividual
     End Function
+
+
 
     'implementation is based on Algorithm 32
 

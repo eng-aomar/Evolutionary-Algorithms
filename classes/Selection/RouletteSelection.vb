@@ -1,6 +1,6 @@
 ﻿'Implementation of Algorithm Number 30 knows as Fitness-Proportionate Selection or SelectWithReplacement Techinque
 'Fitness proportionate-based methods
-Public Class RouletteSelection : Implements ISelection
+Public Class RouletteSelection : Implements ISelection(Of BitArray)
     Dim _proplem As IProblem
 
     Public Sub New(proplem As IProblem)
@@ -16,7 +16,7 @@ Public Class RouletteSelection : Implements ISelection
         End Set
     End Property
 
-    Public Function DoSelection(population As Population) As BitArray Implements ISelection.DoSelection
+    Public Function DoSelection(population As Population) As BitArray Implements ISelection(Of BitArray).DoSelection
 
         Dim indevidualSize As Integer = population.IndevidualSize
         Dim selectedParent As BitArray = New BitArray(indevidualSize)
