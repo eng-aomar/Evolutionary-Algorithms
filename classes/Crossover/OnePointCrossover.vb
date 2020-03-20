@@ -26,17 +26,17 @@ Public Class OnePointCrossover : Implements ICrossover
     End Sub
 
     Public Overrides Function ToString() As String
-        Dim OffSprings0Builder As StringBuilder = New StringBuilder
+        Dim OffSpringsBuilder As StringBuilder = New StringBuilder
 
-        OffSprings0Builder.Append("OffSprings(0)")
+        OffSpringsBuilder.Append("OffSprings(0)")
         For Each bit In OffSprings(0).Cast(Of Boolean)()
-            OffSprings0Builder.Append(If(bit, "1", "0"))
+            OffSpringsBuilder.Append(If(bit, "1", "0"))
         Next
-        OffSprings0Builder.Append(",")
-        OffSprings0Builder.Append("OffSprings(1)")
+        OffSpringsBuilder.Append(",")
+        OffSpringsBuilder.Append("OffSprings(1)")
         For Each bit In OffSprings(0).Cast(Of Boolean)()
-            OffSprings0Builder.Append(If(bit, "1", "0"))
+            OffSpringsBuilder.Append(If(bit, "1", "0"))
         Next
-        Return OffSprings0Builder.ToString
+        Return OffSpringsBuilder.ToString
     End Function
 End Class
