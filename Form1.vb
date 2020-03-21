@@ -34,4 +34,8 @@ Public Class Form1
         Next
     End Sub
 
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Dim frm As FrmCrossover = New FrmCrossover
+        frm.ShowDialog()
+    End Sub
 End Class

@@ -4,9 +4,9 @@ Imports System.Text
 Public Class GeneralGenaticAlgorithm
     Private population As Population
     Private Q As Population
-    Private crossove As ICrossover
+    Private crossove As ICrossover(Of ArrayList)
     Private mutaion As FilpMutation
-    Private Selection As ISelection
+    Private Selection As ISelection(Of BitArray)
     Private Problem As IProblem
     Private popsize_local, indvidualSize_local, TournamentSize_local As Integer
     Private mutation_propablilty_local As Double = 1 / IndvidualSize  ' often p = 1/l where l is the length of the parent
